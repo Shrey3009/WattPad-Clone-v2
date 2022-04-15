@@ -1,5 +1,5 @@
 // ignore_for_file: deprecated_member_use
-
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'signup_screen.dart';
 import 'home.dart';
@@ -7,7 +7,6 @@ import 'home.dart';
 class LoginScreen extends StatefulWidget {
   _LoginScreenState createState() => _LoginScreenState();
   static const routeName = '/login';
-  
 }
 
 class _LoginScreenState extends State<LoginScreen> {
@@ -18,13 +17,11 @@ class _LoginScreenState extends State<LoginScreen> {
       // If the form is valid, display a snackbar. In the real world,
       // you'd often call a server or save the information in a database.
       //ScaffoldMessenger.of(context).showSnackBar(
-       // const SnackBar(content: Text('Logging in ......')),
-        Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => const Application()),
-            );
-
-    
+      // const SnackBar(content: Text('Logging in ......')),
+      Navigator.push(
+        context,
+        MaterialPageRoute(builder: (context) => const Application()),
+      );
     }
   }
 
@@ -50,9 +47,7 @@ class _LoginScreenState extends State<LoginScreen> {
           Container(
             decoration: BoxDecoration(
                 gradient:
-                    LinearGradient(colors: [
-                      Colors.black,
-                       Colors.orange])),
+                    LinearGradient(colors: [Colors.black, Colors.orange])),
           ),
           Center(
               child: Card(
