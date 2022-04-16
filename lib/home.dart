@@ -3,12 +3,16 @@
 import 'package:flutter/material.dart';
 import 'otherpage.dart';
 
-
+void main() {
+  runApp(const MaterialApp(
+    title: 'Home Page',
+    home: Application(),
+  ));
+}
 
 class Application extends StatefulWidget {
-  
   const Application({Key? key}) : super(key: key);
- 
+
   @override
   _ApplicationState createState() => _ApplicationState();
   static const routeName = '/homes';
@@ -39,7 +43,7 @@ class _ApplicationState extends State<Application>
 
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.black,
+        backgroundColor: Colors.black,
         appBar: AppBar(
           title: Text(
             'WatttPad',
@@ -75,7 +79,7 @@ class _ApplicationState extends State<Application>
               children: <Widget>[
                 UserAccountsDrawerHeader(
                   accountName: Text('Dummy User'),
-                  accountEmail: Text('dummy@email.com'),
+                  accountEmail: Text('dummyemail@gmail.com'),
                   currentAccountPicture: CircleAvatar(
                     backgroundColor: Colors.black54,
                     child: Text('M'),
@@ -118,7 +122,10 @@ class _ApplicationState extends State<Application>
                   height: 70.0,
                   child: ElevatedButton(
                       onPressed: () {
-                        method1();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const op()));
                       },
                       child: Text(rtext),
                       style: ElevatedButton.styleFrom(
@@ -135,7 +142,10 @@ class _ApplicationState extends State<Application>
                   height: 70.0,
                   child: ElevatedButton(
                       onPressed: () {
-                        method1();
+                        Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                                builder: (context) => const op()));
                       },
                       child: Text(wtext),
                       style: ElevatedButton.styleFrom(
